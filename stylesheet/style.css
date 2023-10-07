@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: #0099ff;
+    --color: #dde1e7;
+    --background-color: #dde1e7;
+    --box-shadow:-4px -4px 7px #ffffff73,
+    4px 4px 7px rgba(94, 104, 122, .288);
+    --box-shadow-3:-4px -4px 7px rgba(151, 157, 168, 0.288),
+    4px 4px 7px rgba(151, 157, 168, 0.288);
+    --inset-box-shadow:inset -4px -4px 7px rgba(94, 104, 122, .288),
+    inset 4px 4px 7px #ffffff73;
+}
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--background-color);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-image: url(/images/wave\ \(4\).svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    overflow: hidden;
+}
+.onlineCont{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.online{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.online h1{
+    color: var(--color);
+    text-align: center;
+}
+.online p{
+    color: var(--color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.online .close{
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+}
+.online .close p{
+    color: var(--color);
+    font-size: 50px;
+    cursor: pointer;
+}
+.wrapper {
+    background-color: var(--background-color);
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    transition: linear 0.3s;
+}
+.wrapper::before{
+    content: '';
+    width: 70px;
+    height: 70px;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 5px 0px 70px 0px;
+}
+.wrapper::after{
+    content: '';
+    width: 70px;
+    height: 70px;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 0px 5px 0px 70px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 250px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--text-color);
+}
+.head h1{
+    font-size: 35px;
+    color: var(--color);
+}
+.userListCont {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+.userListWrap {
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.inputField {
+    width: 330px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.addList {
+    width: 90%;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+}
+.addList input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--inset-box-shadow);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    text-indent: 15px;
+    font-weight: 600;
+}
+.addList input::placeholder{
+    text-align: center;
+    color: var(--text-color);
+}
+.addList button{
+    width: 70%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    color: var(--color);
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+.alertMessage{
+    margin-top: 1vh;
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.showListCont {
+    width: 65%;
+    height: 350px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showList {
+    width: 100%;
+    box-shadow: var(--inset-box-shadow);
+    overflow-y: scroll;
+    height: 330px;
+}
+.showList::-webkit-scrollbar{
+    width: 10px;
+}
+.showList::-webkit-scrollbar-track{
+    background-color: #0099ff;
+    border-radius: 30px;
+    margin: 1vh;
+}
+.showList::-webkit-scrollbar-thumb{
+    background-color: var(--color);
+    border-radius: 10px;
+}
+.createParent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createChild2{
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 1vh;
+}
+.createChild{
+    width: 100%;
+    margin: 1vh;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0099ff;
+}
+.createChild p{
+    color: var(--color);
+    font-size: 20px;
+    font-weight: 600;
+}
+.createChild i{
+    color: var(--color);
+    cursor: pointer;
+    transition: linear 0.3s;
+}
+.createChild i:hover{
+    color: rgb(217, 215, 215);
+}
+@media screen and (max-width: 1199px) {
+    .userListWrap {
+        width: 100%;
+        height: 500px;
+    }
+    .inputField {
+        width: 300px;
+        height: 170px;
+        box-shadow: var(--box-shadow);
+    }
+    form.addList{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .addList button{
+        width: 40%;
+    }
+    .showListCont {
+        width: 90%;
+        height:300px;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .showList {
+        width: 100%;
+        box-shadow: var(--inset-box-shadow);
+        height: 280px;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .container{
+        padding: 10px;
+        background-size: 100%;
+    }
+    .wrapper{
+        width: 95%;
+    }
+    .inputField {
+        width: 90%;
+    }
+}

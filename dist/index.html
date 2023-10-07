@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <script src="bundle.js" defer></script>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;1,300&family=Rajdhani&display=swap" rel="stylesheet">
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="onlineCont">
+            <div class="online">
+                <div class="close">
+                    <p>&times;</p>
+                </div>
+                <div class="onlineText">
+                    <h1>You are currently offline.</h1>
+                    <p>Kindly refresh your page <br> to get back on track.</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <div class="head">
+                    <h1>Todo List App</h1>
+                </div>
+            </div>
+            <div class="userListCont">
+                <div class="userListWrap">
+                    <div class="inputField">
+                        <form class="addList">
+                            <input type="text" id="userList" name="userList" placeholder="Enter Your List"><br>
+                            <button>Add List</button>
+                        </form>
+                        <div class="alertMessage">
+                            <p class="alert"></p>
+                        </div>
+                    </div>
+                    <div class="showListCont">
+                        <div class="showList">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
